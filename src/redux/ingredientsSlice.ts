@@ -32,12 +32,12 @@ const IngredientsSlice = createSlice({
         addIngredient: (state, action: PayloadAction<string>) => {
             state.ingredients.push(action.payload);
             if(action.payload === "meat" || action.payload === "cheese" || action.payload === "bacon" || action.payload === "salad")
-            state.price += +prices[action.payload].toFixed(2);
+            state.price += +prices[action.payload];
         },
     
         removeIngredient: (state, action: PayloadAction<string>) => {
             if(action.payload === "meat" || action.payload === "cheese" || action.payload === "bacon" || action.payload === "salad")
-            state.price -= +prices[action.payload].toFixed(2);
+            state.price -= +prices[action.payload];
             state.ingredients.splice(state.ingredients.lastIndexOf(action.payload), 1);
         }
     }

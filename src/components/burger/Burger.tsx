@@ -16,7 +16,9 @@ const Burger = () => {
           <div className="seeds2"></div>
         </div>
         {!ingredients.length ? (
-          <p className="my-2 font-semibold">How would you like your burger?</p>
+          <p className="my-2 font-semibold text-center">
+            How would you like your burger?
+          </p>
         ) : (
           ingredients.map((ingredient, index) => (
             <Ingredient
@@ -28,7 +30,7 @@ const Burger = () => {
         {/* Bottom bun */}
         <div
           className="relative w-full max-w-xs h-11 my-1 bg-gradient-to-b from-[#bc581e] to-[#e27b36]
-      rounded-b-3xl shadow-[inset_-15px_0_#c15711] md:max-w-sm md:min-h-[45px]"
+      rounded-b-3xl shadow-[inset_-15px_0_#c15711] md:max-w-sm md:min-h-[55px]"
         ></div>
       </div>
     </div>
