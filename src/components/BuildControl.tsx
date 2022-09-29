@@ -7,7 +7,7 @@ interface Props {
 }
 
 const BuildControl = ({ type }: Props) => {
-  const { ingredients } = useAppSelector((state) => state.ingredients);
+  const { ingredients } = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
 
   return (

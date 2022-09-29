@@ -51,7 +51,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             style={({ isActive }) => ({
-              color: isActive ? "blue" : "black",
+              color: isActive ? "#e98a0dd3" : "black",
             })}
             className="md:mx-3"
           >
@@ -59,6 +59,7 @@ const Navbar = () => {
               className="my-5 font-semibold md:m-0 md:text-white"
               whileHover={{
                 scale: 1.15,
+                originX: 0,
                 color: "#e98a0dd3",
               }}
             >
@@ -68,7 +69,7 @@ const Navbar = () => {
           <NavLink
             to="/orders"
             style={({ isActive }) => ({
-              color: isActive ? "blue" : "black",
+              color: isActive ? "#e98a0dd3" : "black",
             })}
             className="md:mx-3"
           >
@@ -76,6 +77,7 @@ const Navbar = () => {
               className="my-5 font-semibold md:m-0 md:text-white"
               whileHover={{
                 scale: 1.15,
+                originX: 0,
                 color: "#e98a0dd3",
               }}
             >

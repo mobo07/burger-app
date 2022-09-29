@@ -8,7 +8,7 @@ interface Props {
 const buildControlType = ["meat", "cheese", "bacon", "salad"];
 
 const BuildControls = ({ handleModal }: Props) => {
-  const { price } = useAppSelector((state) => state.ingredients);
+  const { price } = useAppSelector((state) => state);
 
   return (
     <div className="w-full bg-[#CF8F2E] text-center py-3">

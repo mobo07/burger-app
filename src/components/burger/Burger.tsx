@@ -1,9 +1,12 @@
 import "./burger.css";
 import Ingredient from "../Ingredient";
-import { useAppSelector } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { reset } from "../../redux/ingredientsSlice";
+import { motion } from "framer-motion";
 
 const Burger = () => {
-  const { ingredients, price } = useAppSelector((state) => state.ingredients);
+  const { ingredients, price } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
 
   return (
     // Wrapper Div
@@ -16,7 +19,7 @@ const Burger = () => {
           <div className="seeds2"></div>
         </div>
         {!ingredients.length ? (
-          <p className="my-2 font-semibold text-center">
+          <p className="my-2 text-sm font-semibold text-center md:text-base">
             How would you like your burger?
           </p>
         ) : (
@@ -33,6 +36,17 @@ const Burger = () => {
       rounded-b-3xl shadow-[inset_-15px_0_#c15711] md:max-w-sm md:min-h-[55px]"
         ></div>
       </div>
+      {ingredients.length > 0 && (
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 0.5 } }}
+          whileHover={{ scale: 1.1 }}
+          onClick={() => dispatch(reset())}
+          className="block mx-auto mt-10 py-1 px-2 rounded-md bg-[#b86212] text-white text-sm tracking-wider font-semibold shadow-lg"
+        >
+          reset
+        </motion.button>
+      )}
     </div>
   );
 };
