@@ -21,16 +21,16 @@ const Orders = () => {
               {/* Ingredients */}
               <p className="my-1 md:my-3">
                 Ingredients:{" "}
-                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-2">
+                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-1 md:m-2">
                   {order.bacon.name} ({order.bacon.quantity})
                 </span>
-                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-2">
+                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-1 md:m-2">
                   {order.meat.name} ({order.meat.quantity})
                 </span>
-                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-2">
+                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-1 md:m-2">
                   {order.salad.name} ({order.salad.quantity})
                 </span>
-                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-2">
+                <span className="px-2 py-1 inline-block border border-[#dfdede] bg-white m-1 md:m-2">
                   {order.cheese.name} ({order.cheese.quantity})
                 </span>
               </p>
